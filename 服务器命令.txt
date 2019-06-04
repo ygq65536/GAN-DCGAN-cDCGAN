@@ -1,0 +1,18 @@
+rsync -ah --progress /data/CGANCIFAR10/  /input/
+
+rsync -ah --progress /input/c/  /data/
+
+nvidia-smi
+
+rm -rf /input/MNIST_DCGAN_results/
+
+rsync -ah --progress /data/automobile.npy /input/data/
+
+rsync -ah --progress /input/MNIST_DCGAN_results/  /data/y/
+
+rsync -ah --progress /input/MNIST_DCGAN_results/  /data/auto/
+
+rsync -ah --progress /input/MNIST_cDCGAN_results/  /data/c/
+
+python main.py --gan_type GAN --dataset cifar10
+
